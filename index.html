@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>在线下单系统</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>在线下单系统</h1>
+        </header>
+        
+        <main>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">微信号:</label>
+                    <input type="text" id="name" required placeholder="请输入微信号">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">电话:</label>
+                    <input type="tel" id="phone" required>
+                    <p class="important-note phone-note"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">密码:</label>
+                    <div class="password-container">
+                        <input type="password" id="password" required autocomplete="off">
+                        <button type="button" class="toggle-password" onclick="togglePassword()">显示</button>
+                    </div>
+                    <p class="important-note password-note"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="product">产品选择:</label>
+                    <select id="product" required>
+                        <option value="" disabled selected>请选择产品（全部1.3元/科）</option>
+                        <option value="product1">学习通视频＋测验 - 单刷视频+测验不考试</option>
+                        <option value="product2">学习通单考试 - 选修95+，必修及格线附近，安全可靠</option>
+                        <option value="product3">学习通全包 - 视频+测验+考试全套服务，强烈推荐</option>
+                        <option value="product4">智慧树全套 - 视频+测验+考试，选修95+，必修及格（不考试请刷完改密码）</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">课程:</label>
+                    <input type="text" id="quantity" required placeholder="请输入课程名称">
+                </div>
+
+                <button type="submit">提交订单</button>
+            </form>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 
